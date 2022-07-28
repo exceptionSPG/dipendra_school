@@ -25,6 +25,9 @@ Route::get('/dashboard', function () {
 //Admin all routes here
 Route::controller(AdminController::class)->group(function () {
     Route::get('/admin/logout', 'AdminLogout')->name('admin.logout');
+    Route::get('/admin/profile', 'AdminProfile')->name('admin.profile');
+    Route::get('/edit/profile', 'EditProfile')->name('edit.profile');
+    Route::post('/store/profile', 'StoreProfile')->name('store.profile');
 });
 
 require __DIR__ . '/auth.php';
