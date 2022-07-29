@@ -9,7 +9,7 @@
                 <div class="card">
                     <br>
                     <center>
-                        <img class="rounded-circle avatar-xl" src="{{ asset('upload/admin_images/'.$adminData->profile_image) }}" alt="Card image cap">
+                        <img class="rounded-circle avatar-xl" src="{{ (!empty($editData->profile_image))? url('upload/admin_images/'.$editData->profile_image):url('upload/no_image.png') }}" alt="Card image cap">
 
                     </center>
                     <div class="card-body">
