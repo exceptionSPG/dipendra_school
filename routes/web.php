@@ -22,6 +22,7 @@ Route::get('/dashboard', function () {
     return view('admin.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+
 //Admin all routes here
 Route::controller(AdminController::class)->group(function () {
     Route::get('/admin/logout', 'AdminLogout')->name('admin.logout');
@@ -30,6 +31,8 @@ Route::controller(AdminController::class)->group(function () {
     Route::post('/store/profile', 'StoreProfile')->name('store.profile');
     Route::get('/change/password', 'ChangePassword')->name('change.password');
     Route::post('/update/password', 'UpdatePassword')->name('update.password');
+    Route::get('/home/slide', 'HomeSlide')->name('home.slide');
+    Route::get('/about', 'About')->name('about.page');
 });
 
 require __DIR__ . '/auth.php';

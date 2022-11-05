@@ -97,4 +97,14 @@ class AdminController extends Controller
             return redirect()->back();
         }
     }
+
+    public function HomeSlide()
+    {
+        return "OK";
+    }
+
+    public function About()
+    {
+        return "OK";
+    }
 }
