@@ -20,9 +20,9 @@
                 </li>
 
                 <li>
-                    <a href="calendar.html" class=" waves-effect">
+                    <a href="{{route('dipendra.bisesta') }}" class=" waves-effect">
                         <i class="ri-calendar-2-line"></i>
-                        <span>Calendar</span>
+                        <span>दिपेन्द्रका विशेषता</span>
                     </a>
                 </li>
 
