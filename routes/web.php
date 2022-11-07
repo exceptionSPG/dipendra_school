@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\BisestaController;
 
 /*
@@ -41,7 +42,32 @@ Route::controller(BisestaController::class)->group(function () {
     Route::post('/dipendra/bisesta', 'BisestaStore')->name('bisesta.store'); //
     Route::get('/bisesta/edit/{id}', 'BisestaEdit')->name('bisesta.edit'); //
     Route::post('/bisesta/update', 'BisestaUpdate')->name('bisesta.update'); //bisesta.delete
-    Route::get('/bisesta/delete/{id}', 'BisestaDelete')->name('bisesta.delete'); //
+    Route::get('/bisesta/delete/{id}', 'BisestaDelete')->name('bisesta.delete'); //about.introduction
+
+
+
+});
+
+
+Route::controller(AboutController::class)->group(function () {
+
+    Route::get('/about/introduction', 'IntroductionView')->name('about.introduction'); //about.introduction
+    Route::post('/introduction/update', 'IntroductionUpdate')->name('update.introduction');
+
+    Route::get('/teacher/all', 'TeachersView')->name('teachers.view'); //teachers.add
+    Route::get('/teacher/add', 'TeachersAdd')->name('teachers.add'); //teacher.store
+    Route::post('/teacher/store', 'TeacherStore')->name('teacher.store'); //teachers.edit
+    Route::get('/teacher/edit/{id}', 'TeacherEdit')->name('teachers.edit'); //teacher.update
+    Route::post('/teacher/update', 'TeacherUpdate')->name('teacher.update'); //
+    Route::get('/teacher/delete/{id}', 'TeacherDelete')->name('teacher.delete'); //
+
+
+    Route::get('/timeline/all', 'TimelineView')->name('timeline.view'); //timeline.store
+    Route::post('/timeline/store', 'TimelineStore')->name('timeline.store'); //timeline.edit
+    Route::get('/timeline/edit/{id}', 'TimelineEdit')->name('timeline.edit'); //
+    Route::post('/timeline/update', 'TimelineUpdate')->name('timeline.update'); //timeline.edit
+    Route::get('/timeline/delete/{id}', 'TimelineDelete')->name('timeline.delete'); //timeline.edit
+
 
 
 

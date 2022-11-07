@@ -8,3 +8,14 @@ https://rsmv.edu.np/
 home ko slider section ma latest event euta, news euta ra blog eutako title ra short description dekhamla...
 
 moving to next section..
+11:06 PM 11/6/2022 
+color palette:
+main black: #1a1a37
+yellow: #ffbc3b
+
+aba about gara, teachers detail sahit
+
+https://bootsnipp.com/snippets/ElpmP
+
+4:16 PM 11/7/2022 teacher add and edit ko function baki
+8:53 PM 11/7/2022 continue work...

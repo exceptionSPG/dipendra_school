@@ -105,6 +105,35 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 
+    <!-- Hamrocollection bata liyiyeka js file haru -->
+
+
+
+
+
+    <!-- Vendor JS -->
+    <script src="{{ asset('utako/backend/js/vendors.min.js') }}"></script>
+    <script src="{{ asset('../utako/assets/icons/feather-icons/feather.min.js') }}"></script>
+    <script src="{{ asset('../utako/assets/vendor_components/datatable/datatables.min.js') }}"></script>
+    <script src="{{ asset('utako/backend/js/pages/data-table.js') }}"></script>
+
+    <!-- Sunny Admin App -->
+    <script src="{{ asset('utako/backend/js/template.js') }}"></script>
+
+
+    <!-- CK Editor -->
+
+    <script src="{{ asset('../utako/assets/vendor_components/ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ asset('../utako/assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js') }}"></script>
+    <script src="{{ asset('utako/backend/js/pages/editor.js') }}"></script>
+    <!-- ************************Hamrocollection js end***************** -->
+
+
+
+
+
+
+
     <script>
         @if(Session::has('message'))
         var type = "{{ Session::get('alert-type','info') }}"
@@ -128,7 +157,7 @@
         @endif
     </script>
 
-    <script src="{{ asset('backend/js/code.js') }}"></script>
+    <script src=" {{ asset('backend/js/code.js') }}"></script>
 </body>
 
 </html>

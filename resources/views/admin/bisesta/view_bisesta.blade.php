@@ -2,66 +2,73 @@
 @section('admin')
 
 
-<!-- Content Wrapper. Contains page content -->
-
-<div class="container-full" style="background-color: #ffbc3b;">
-    <!-- Content Header (Page header) -->
 
 
-    <!-- Main content -->
-    <section class="content p-3">
+
+
+
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <!-- start page title -->
         <div class="row">
-            <div class="col-8">
-
-                <div class="box">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">विशेषता List <span class="text-danger">{{ count($bisesta) }}</span></h3>
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        <div class="table-responsive">
-                            <table id="example1" class="table table-bordered table-striped">
-                                <thead class="text-bold">
-                                    <tr>
-                                        <th>विशेषता icon</th>
-                                        <th>Title</th>
-                                        <th>Description</th>
-                                        <th>Action</th>
-
-                                    </tr>
-
-                                </thead>
-                                <tbody>
-                                    <!--url('upload/brand/'.$item->brand_image)-->
-                                    @foreach($bisesta as $item)
-                                    <tr>
-                                        <td><span><i class="{{ $item->icon }}"></i></span></td>
-                                        <td>{{ $item->title }}</td>
-                                        <td>{{ $item->description }} </td>
-                                        <td width=30%><a href="{{ route('bisesta.edit',$item->id) }}" class="btn btn-info sm" title="Edit Data"><i class="fa fa-edit"></i></a>
-                                            <a href="{{ route('bisesta.delete',$item->id) }}" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="fa fa-trash"></i></a>
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0"> विशेषता List <span class="text-danger">{{ count($bisesta) }}</span></h4>
 
 
-                                        </td>
-
-                                    </tr>
-
-                                    @endforeach
-                                </tbody>
-
-                            </table>
-                        </div>
-                    </div>
-                    <!-- /.box-body -->
                 </div>
-                <!-- /.box -->
-                <!-- /.box -->
             </div>
-            <!-- /.col 12 -->
+        </div>
+        <!-- end page title -->
+
+        <div class="row">
+            <div class="col-7">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Timelines All</h4>
+
+
+                        <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>विशेषता icon</th>
+                                    <th>Title</th>
+                                    <th>Description</th>
+                                    <th>Action</th>
+
+                                </tr>
+                            </thead>
+
+
+                            <tbody>
+
+                                @foreach($bisesta as $item)
+                                <tr>
+                                    <td><span><i class="{{ $item->icon }}"></i></span></td>
+                                    <td>{{ $item->title }}</td>
+                                    <td>{{ $item->description }} </td>
+                                    <td width=30%><a href="{{ route('bisesta.edit',$item->id) }}" class="btn btn-info sm" title="Edit Data"><i class="fa fa-edit"></i></a>
+                                        <a href="{{ route('bisesta.delete',$item->id) }}" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="fa fa-trash"></i></a>
+
+
+                                    </td>
+
+                                </tr>
+                                @endforeach
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div> <!-- end col -->
 
             <!-- -----------------Add Brand Col -->
 
-            <div class="col-4">
+            <div class="col-5">
 
                 <div class="box">
                     <div class="box-header with-border">
@@ -122,15 +129,16 @@
                 <!-- /.box -->
                 <!-- /.box -->
             </div>
-            <!-- /.col 12 -->
-        </div>
-        <!-- /.row -->
-    </section>
-    <!-- /.content -->
+            <!-- /.col 4 -->
+        </div> <!-- end row -->
 
+
+
+
+
+    </div> <!-- container-fluid -->
 </div>
-
-<!-- /.content-wrapper -->
+<!-- End Page-content -->
 
 
 

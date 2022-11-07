@@ -29,18 +29,19 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
-                        <span>Email</span>
+                        <span>About</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="email-inbox.html">Inbox</a></li>
-                        <li><a href="email-read.html">Read Email</a></li>
+                        <li><a href="{{ route('about.introduction') }}">Introduction</a></li>
+                        <li><a href="{{ route('teachers.view') }}">Teachers</a></li>
+                        <li><a href="{{ route('timeline.view') }}">Timeline</a></li>
                     </ul>
                 </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-layout-3-line"></i>
-                        <span>Layouts</span>
+                        <span>Committees</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="true">
                         <li>
