@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\BisestaController;
+use App\Http\Controllers\Frontend\AboutController as FrontendAboutController;
+use App\Http\Controllers\Frontend\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,8 +18,12 @@ use App\Http\Controllers\Backend\BisestaController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::controller(IndexController::class)->group(function () {
+    Route::get('/', 'Index')->name('index');//about.introduction
+});
+
+Route::controller(FrontendAboutController::class)->group(function () {
+    Route::get('/about-us', 'Introduction')->name('frontend.about.introduction');//about.introduction
 });
 
 Route::get('/dashboard', function () {
