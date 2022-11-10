@@ -24,7 +24,8 @@ Route::controller(IndexController::class)->group(function () {
 
 Route::controller(FrontendAboutController::class)->group(function () {
     Route::get('/about-us', 'Introduction')->name('frontend.about.introduction');//frontend.about.teachers
-    Route::get('/teachers', 'Teachers')->name('frontend.about.teachers');//frontend.about.teachers
+    Route::get('/teachers', 'Teachers')->name('frontend.about.teachers');//
+    Route::get('/teacher/details/{id}', 'TeacherDetails')->name('teacher-details');//teacher-details
 });
 
 Route::get('/dashboard', function () {

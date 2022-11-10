@@ -73,7 +73,7 @@ Home - Dipendra Higher Secondary School
             <div class="col-lg-6 col-sm-8">
                 <div class="bg-white p-5">
                     <h2 class="section-title">Our Vision</h2>
-                    {!! $intro !!}
+                    {!! $intro->vision !!}
                 </div>
             </div>
         </div>

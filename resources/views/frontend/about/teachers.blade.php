@@ -15,9 +15,9 @@ Home - Dipendra Higher Secondary School
 
             <div class="col-lg-4  col-sm-6 mb-5">
                 <div class="card border-0 rounded-0 hover-shadow">
-                    <img class="card-img-top rounded-0" src="{{ asset($principal->photo) }}" alt="teacher">
+                    <img class="card-img-top rounded-0" width="340" height="383" src="{{ asset($principal->photo) }}" alt="teacher">
                     <div class="card-body">
-                        <a href="teacher-single.html">
+                        <a href="{{ route('teacher-details',$principal->id) }}">
                             <h4 class="card-title">{{ $principal->name }}</h4>
                         </a>
                         <p>{{ $principal->designation }}</p>
@@ -64,9 +64,9 @@ Home - Dipendra Higher Secondary School
             <!-- teacher -->
             <div class="col-lg-4 col-sm-6 mb-5">
                 <div class="card border-0 rounded-0 hover-shadow">
-                    <img class="card-img-top rounded-0" src="{{ asset($item->photo) }}" alt="teacher">
+                    <img class="card-img-top rounded-0" width="340" height="383" src="{{ asset($item->photo) }}" alt="teacher">
                     <div class="card-body">
-                        <a href="teacher-single.html">
+                        <a href="{{ route('teacher-details',$item->id) }}">
                             <h4 class="card-title">{{ $item->name }}</h4>
                         </a>
                         <p>{{ $item->designation }}</p>

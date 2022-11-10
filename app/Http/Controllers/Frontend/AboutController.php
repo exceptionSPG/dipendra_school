@@ -26,5 +26,14 @@ class AboutController extends Controller
         $principal = Teachers::where('designation', 'principal')->first();
         $page_title = "Our Teachers";
         return view('frontend.about.teachers', compact('teachers', 'principal', 'page_title'));
+    } //end method
+
+    public function TeacherDetails($id)
+    {
+        $teacher = Teachers::findOrFail($id);
+        $parent_page = "Our Teachers";
+        $route = "frontend.about.teachers";
+        $page_title = $teacher->name;
+        return view('frontend.about.teacher_details', compact('teacher', 'parent_page', 'route', 'page_title'));
     }
 }
