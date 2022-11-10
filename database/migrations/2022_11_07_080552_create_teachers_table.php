@@ -29,7 +29,7 @@ return new class extends Migration
             $table->string('qualification');
             $table->string('experience');
             $table->text('biography');
-            $table->string('mfs')->nullable();
+            $table->text('mfs')->nullable();
             $table->string('since')->nullable();
 
             $table->timestamps();

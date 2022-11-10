@@ -41,7 +41,7 @@ Home - Dipendra Higher Secondary School
                 <h2 class="section-title">About Dipendra</h2>
                 <p>{!! $about->description !!} </p>
 
-                <a href="about.html" class="btn btn-outline-primary">Learn more</a>
+                <a href="{{ route('frontend.about.introduction') }}" class="btn btn-outline-primary">Learn more</a>
             </div>
             <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0">
                 <img class="img-fluid w-100" width="540" height="334" src="{{ asset($about->thumbnail) }}" alt="about image">

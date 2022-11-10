@@ -46,7 +46,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{{ route('frontend.about.introduction') }}">Introduction</a></li>
-                                <li><a class="dropdown-item" href="teacher-single.html">Our Teachers</a></li>
+                                <li><a class="dropdown-item" href="{{ route('frontend.about.teachers') }}">Our Teachers</a></li>
                                 <li><a class="dropdown-item" href="notice.html">Our Journey</a></li>
 
 

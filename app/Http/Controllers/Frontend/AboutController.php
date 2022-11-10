@@ -16,6 +16,15 @@ class AboutController extends Controller
         $intro = AboutIntroduction::first();
         $teachersCount = Teachers::all()->count();
         //committee section sake paxi, count pathaune
-        return view('frontend.about.about_introduction', compact('intro', 'teachersCount'));
+        $page_title = "About Us";
+        return view('frontend.about.about_introduction', compact('intro', 'teachersCount', 'page_title'));
+    } //end method
+
+    public function Teachers()
+    {
+        $teachers = Teachers::where('designation', '!=', 'principal')->get();
+        $principal = Teachers::where('designation', 'principal')->first();
+        $page_title = "Our Teachers";
+        return view('frontend.about.teachers', compact('teachers', 'principal', 'page_title'));
     }
 }
