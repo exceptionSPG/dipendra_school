@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\BisestaController;
+use App\Http\Controllers\Backend\CommitteeController;
 use App\Http\Controllers\Frontend\AboutController as FrontendAboutController;
 use App\Http\Controllers\Frontend\IndexController;
 
@@ -77,6 +78,29 @@ Route::controller(AboutController::class)->group(function () {
     Route::get('/timeline/edit/{id}', 'TimelineEdit')->name('timeline.edit'); //
     Route::post('/timeline/update', 'TimelineUpdate')->name('timeline.update'); //timeline.edit
     Route::get('/timeline/delete/{id}', 'TimelineDelete')->name('timeline.delete'); //timeline.edit
+
+
+
+
+});
+
+//
+
+Route::controller(CommitteeController::class)->group(function () {
+
+    Route::get('/committee/all', 'CommitteeView')->name('committee.all'); //committee.add
+    Route::get('/committee/edit/{id}', 'CommitteeEdit')->name('committee.edit'); //committee.update
+    Route::post('/committee/update', 'CommitteeUpdate')->name('committee.update'); //
+
+    Route::get('/bibyasa/view', 'BibyasaView')->name('bibyasa.all'); //bibyasa.add
+    Route::get('/bibyasa/add', 'BibyasaAdd')->name('bibyasa.add'); //bibyasa.store
+    Route::post('/bibyasa/store', 'BibyasaStore')->name('bibyasa.store'); //bibyasa.edit
+    Route::get('/bibyasa/edit/{id}', 'BibyasaEdit')->name('bibyasa.edit'); //bibyasa.edit
+    Route::post('/bibyasa/update', 'BibyasaUpdate')->name('bibyasa.update'); //
+    Route::get('/bibyasa/delete/{id}', 'BibyasaDelete')->name('bibyasa.delete'); //
+
+
+
 
 
 
