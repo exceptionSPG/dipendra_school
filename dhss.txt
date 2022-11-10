@@ -24,3 +24,7 @@ frontend editing
 {{ asset('frontend/ ')}}
 
 10:49 PM 11/7/2022 goodnight
+1:07 PM 11/10/2022
+1:07 PM 11/10/2022 done upto teacher and teacher single...
+
+2:11 PM 11/10/2022 after khana...

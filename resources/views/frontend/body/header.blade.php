@@ -1,3 +1,9 @@
+@php
+
+use Illuminate\Support\Facades\Route;
+
+$route = Route::current()->getName();
+@endphp
 <!-- header -->
 <header class="fixed-top header">
     <!-- top header -->
@@ -29,25 +35,25 @@
     <div class="navigation w-100">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark p-0">
-                <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+                <a class="navbar-brand" href="{{ route('index') }}"><img src="{{ asset('frontend/images/logo.png') }}" alt="logo"></a>
                 <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navigation">
                     <ul class="navbar-nav ml-auto text-center">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home</a>
+                        <li class="nav-item {{ ($route == 'index' ) ? 'active':'' }}">
+                            <a class="nav-link" href="{{ route('index') }}">Home</a>
                         </li>
 
-                        <li class="nav-item @@about dropdown view">
+                        <li class="nav-item @@about dropdown view {{ ($route == 'frontend.about.introduction' ||$route == 'frontend.about.teachers' ||$route == 'frontend.about.timelines'  ) ? 'active':'' }}">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 About
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="{{ route('frontend.about.introduction') }}">Introduction</a></li>
+                                <li class="{{ ($route == 'frontend.about.introduction' ) ? 'active':'' }}"><a class="dropdown-item" href="{{ route('frontend.about.introduction') }}">Introduction</a></li>
                                 <li><a class="dropdown-item" href="{{ route('frontend.about.teachers') }}">Our Teachers</a></li>
-                                <li><a class="dropdown-item" href="notice.html">Our Journey</a></li>
+                                <li><a class="dropdown-item" href="{{ route('frontend.about.timelines') }}">Our Journey</a></li>
 
 
 

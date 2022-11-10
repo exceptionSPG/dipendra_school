@@ -32,18 +32,7 @@ Home - Dipendra Higher Secondary School
                             <li class="mb-3"><a class="text-color" href="http://maps.google.com/"><i class="ti-location-pin mr-2"></i>{{$teacher->address}}</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-6 mb-5 mb-md-0">
-                        <h4 class="mb-4">Qualification INFO:</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-3"><a class="text-color"><i class="ti-email mr-2"></i>{{ $teacher->email }}</a></li>
-                            <li class="mb-3"><a class="text-color" href="tel:{{$teacher->phone}}"><i class="ti-mobile mr-2"></i>{{$teacher->phone}}</a></li>
-                            <li class="mb-3"><a class="text-color" href="{{$teacher->facebook}}"><i class="ti-facebook mr-2"></i>{{$teacher->name}}</a></li>
-                            <li class="mb-3"><a class="text-color" href="{{$teacher->instagram}}"><i class="ti-instagram mr-2"></i>{{$teacher->name}}</a></li>
-                            <li class="mb-3"><a class="text-color" href="{{$teacher->youtube}}"><i class="ti-youtube mr-2"></i>{{$teacher->name}}</a></li>
-                            <!-- <li class="mb-3"><a class="text-color" href="teacher-single.html"><i class="ti-world mr-2"></i>johnDoe.com</a></li> -->
-                            <li class="mb-3"><a class="text-color" href="http://maps.google.com/"><i class="ti-location-pin mr-2"></i>{{$teacher->address}}</a></li>
-                        </ul>
-                    </div>
+
 
                 </div>
             </div>
@@ -52,14 +41,11 @@ Home - Dipendra Higher Secondary School
                 <p class="mb-5">{!! $teacher->biography !!}</p>
                 <div class="row">
                     <div class="col-md-6">
-                        <h6 class="mb-4">SUMMARY OF ACTIVITIES/INTERESTS</h6>
+                        <h6 class="mb-4">EDUCATION:</h6>
                         <!-- {!! $teacher->interests !!} -->
-                        <ul class="list-unstyled">
-
-                            {!! $teacher->interests !!}
-                            <!-- <li class="mb-3">Computer Security</li>
-                            <li class="mb-3">Human Computer Interfacing</li> -->
-                        </ul>
+                        <label>Qualification: <strong>{{$teacher->qualification}}</strong></label><br>
+                        <label>Experience: <strong>{{$teacher->experience}}</strong></label><br>
+                        <label>Joined DHSS: <strong>{{ Carbon\Carbon::parse($teacher->since)->diffForHumans() }}</strong></label>
                     </div>
                     <div class="col-md-6">
                         <h6 class="mb-4">SUMMARY OF ACTIVITIES/INTERESTS</h6>
@@ -77,7 +63,7 @@ Home - Dipendra Higher Secondary School
         </div>
         <div class="row justify-content-center">
             <div class="col-12">
-                <h4 class="mb-4">Message for Students:</h4>
+                <h4 class="mb-4">MESSAGE FOR STUDENTS:</h4>
                 {!! $teacher->mfs !!}
             </div>
 

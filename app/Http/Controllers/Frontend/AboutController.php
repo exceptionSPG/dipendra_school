@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Backend\AboutIntroduction;
 use App\Models\Backend\Teachers;
+use App\Models\Backend\Timeline;
 use Illuminate\Http\Request;
 
 class AboutController extends Controller
@@ -35,5 +36,14 @@ class AboutController extends Controller
         $route = "frontend.about.teachers";
         $page_title = $teacher->name;
         return view('frontend.about.teacher_details', compact('teacher', 'parent_page', 'route', 'page_title'));
+    } //end method
+
+    public function Timelines()
+    {
+        $timelines = Timeline::orderBy('year', 'asc')->get();
+        $parent_page = "Home";
+        $route = "index";
+        $page_title = "Our Journey";
+        return view('frontend.about.timelines', compact('timelines', 'parent_page', 'route', 'page_title'));
     }
 }

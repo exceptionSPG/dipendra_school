@@ -39,9 +39,19 @@
     <!-- Main Stylesheet -->
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
 
+
+    <!-- Our Journey Stylesheet -->
+    <link href="{{ asset('frontend/css/journey_css.css') }}" rel="stylesheet">
+
     <!--Favicon-->
     <link rel="shortcut icon" href="{{ asset('frontend/images/favicon.png') }}" type="image/x-icon">
     <link rel="icon" href="{{ asset('frontend/images/favicon.png') }}" type="image/x-icon">
+
+
+    <!-- CSS file for our journey section -->
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
 
 </head>
 

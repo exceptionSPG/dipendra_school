@@ -19,13 +19,15 @@ use App\Http\Controllers\Frontend\IndexController;
 */
 
 Route::controller(IndexController::class)->group(function () {
-    Route::get('/', 'Index')->name('index');//about.introduction
+    Route::get('/', 'Index')->name('index'); //about.introduction
 });
 
 Route::controller(FrontendAboutController::class)->group(function () {
-    Route::get('/about-us', 'Introduction')->name('frontend.about.introduction');//frontend.about.teachers
-    Route::get('/teachers', 'Teachers')->name('frontend.about.teachers');//
-    Route::get('/teacher/details/{id}', 'TeacherDetails')->name('teacher-details');//teacher-details
+    Route::get('/about-us', 'Introduction')->name('frontend.about.introduction'); //frontend.about.teachers
+    Route::get('/teachers', 'Teachers')->name('frontend.about.teachers'); //
+    Route::get('/teacher/details/{id}', 'TeacherDetails')->name('teacher-details'); //frontend.about.timelines
+
+    Route::get('/our/journey', 'Timelines')->name('frontend.about.timelines'); //frontend.about.timelines
 });
 
 Route::get('/dashboard', function () {
