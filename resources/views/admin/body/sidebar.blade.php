@@ -47,7 +47,7 @@
                         <li><a href="{{ route('committee.all') }}">Committees</a></li>
                         <li><a href="{{ route('bibyasa.all') }}">Bi.Bya.Sa</a></li>
                         <li><a href="{{ route('siawsa.all') }}">Si.Aw.Sa</a></li>
-                        <li><a href="auth-lock-screen.html">Bhupu-Bidhyarthi</a></li>
+                        <li><a href="{{ route('bhupu_bidhyarthi.all') }}">Bhupu-Bidhyarthi</a></li>
                     </ul>
                 </li>
 

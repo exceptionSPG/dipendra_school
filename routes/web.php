@@ -104,12 +104,17 @@ Route::controller(CommitteeController::class)->group(function () {
     Route::post('/siawsa/store', 'SiawsaStore')->name('siawsa.store'); //siawsa.edit
     Route::get('/siawsa/edit/{id}', 'SiawsaEdit')->name('siawsa.edit'); //siawsa.edit
     Route::post('/siawsa/update', 'SiawsaUpdate')->name('siawsa.update'); //
-    Route::get('/siawsa/delete/{id}', 'SiawsaDelete')->name('siawsa.delete'); //siawsa.all
+    Route::get('/siawsa/delete/{id}', 'SiawsaDelete')->name('siawsa.delete'); //bhupu_bidhyarthi
 
 
 
 
-
+    Route::get('/bhupu/view', 'BhupuBidhyarthiView')->name('bhupu_bidhyarthi.all'); //bhupu_bidhyarthi.all
+    Route::get('/bhupu/add', 'BhupuBidhyarthiAdd')->name('bhupu_bidhyarthi.add'); //bhupu_bidhyarthi.store
+    Route::post('/bhupu/store', 'BhupuBidhyarthiStore')->name('bhupu_bidhyarthi.store'); //bhupu_bidhyarthi.edit
+    Route::get('/bhupu/edit/{id}', 'BhupuBidhyarthiEdit')->name('bhupu_bidhyarthi.edit'); //bhupu_bidhyarthi.edit
+    Route::post('/bhupu/update', 'BhupuBidhyarthiUpdate')->name('bhupu_bidhyarthi.update'); //
+    Route::get('/bhupu/delete/{id}', 'BhupuBidhyarthiDelete')->name('bhupu_bidhyarthi.delete'); //
 
 
 
