@@ -48,7 +48,7 @@
                                     <div class="row mb-3">
                                         <label for="example-text-input" class="col-sm-2 col-form-label">email:</label>
                                         <div class="col-sm-10">
-                                            <input class="form-control" type="text" name="email" placeholder="abcd@gmail.com">
+                                            <input class="form-control" required type="text" name="email" placeholder="abcd@gmail.com">
                                             @error('email')
                                             <span class="text-danger"> {{ $message }}</span>
                                             @enderror

@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\BisestaController;
 use App\Http\Controllers\Backend\CommitteeController;
 use App\Http\Controllers\Frontend\AboutController as FrontendAboutController;
+use App\Http\Controllers\Frontend\FrCommitteeController;
 use App\Http\Controllers\Frontend\IndexController;
 
 /*
@@ -30,6 +31,14 @@ Route::controller(FrontendAboutController::class)->group(function () {
 
     Route::get('/our/journey', 'Timelines')->name('frontend.about.timelines'); //frontend.about.timelines
 });
+
+Route::controller(FrCommitteeController::class)->group(function () {
+    Route::get('/bibyasa', 'BiByaSaShow')->name('bibyasa'); //
+    Route::get('/siawsa', 'SiAwSaShow')->name('siawsa'); //
+    Route::get('/bhupu-bidhyarthi', 'BhupuBidhyarthiShow')->name('bhupu_bidhyarthi'); //
+
+});
+
 
 Route::get('/dashboard', function () {
     return view('admin.index');

@@ -62,6 +62,21 @@ $route = Route::current()->getName();
 
 
 
+                        <li class="nav-item @@about dropdown view {{ ($route == 'bibyasa' ||$route == 'siawsa' ||$route == 'bhupu_bidhyarthi'  ) ? 'active':'' }}">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Committees
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="{{ ($route == 'bibyasa' ) ? 'active':'' }}"><a class="dropdown-item" href="{{ route('bibyasa') }}">BiByaSa</a></li>
+                                <li><a class="dropdown-item" href="{{ route('siawsa') }}">SiAwSa</a></li>
+                                <li><a class="dropdown-item" href="{{ route('bhupu_bidhyarthi') }}">Bhupu Bidhyarthi</a></li>
+
+
+
+                            </ul>
+                        </li>
+
+
                         <li class="nav-item @@courses">
                             <a class="nav-link" href="courses.html">COURSES</a>
                         </li>
