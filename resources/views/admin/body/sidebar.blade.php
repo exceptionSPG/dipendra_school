@@ -46,7 +46,7 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('committee.all') }}">Committees</a></li>
                         <li><a href="{{ route('bibyasa.all') }}">Bi.Bya.Sa</a></li>
-                        <li><a href="auth-recoverpw.html">Si.Aw.Sa</a></li>
+                        <li><a href="{{ route('siawsa.all') }}">Si.Aw.Sa</a></li>
                         <li><a href="auth-lock-screen.html">Bhupu-Bidhyarthi</a></li>
                     </ul>
                 </li>

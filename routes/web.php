@@ -97,7 +97,16 @@ Route::controller(CommitteeController::class)->group(function () {
     Route::post('/bibyasa/store', 'BibyasaStore')->name('bibyasa.store'); //bibyasa.edit
     Route::get('/bibyasa/edit/{id}', 'BibyasaEdit')->name('bibyasa.edit'); //bibyasa.edit
     Route::post('/bibyasa/update', 'BibyasaUpdate')->name('bibyasa.update'); //
-    Route::get('/bibyasa/delete/{id}', 'BibyasaDelete')->name('bibyasa.delete'); //
+    Route::get('/bibyasa/delete/{id}', 'BibyasaDelete')->name('bibyasa.delete'); //siawsa.all
+
+    Route::get('/siawsa/view', 'siawsaView')->name('siawsa.all'); //siawsa.add
+    Route::get('/siawsa/add', 'SiawsaAdd')->name('siawsa.add'); //siawsa.store
+    Route::post('/siawsa/store', 'SiawsaStore')->name('siawsa.store'); //siawsa.edit
+    Route::get('/siawsa/edit/{id}', 'SiawsaEdit')->name('siawsa.edit'); //siawsa.edit
+    Route::post('/siawsa/update', 'SiawsaUpdate')->name('siawsa.update'); //
+    Route::get('/siawsa/delete/{id}', 'SiawsaDelete')->name('siawsa.delete'); //siawsa.all
+
+
 
 
 
