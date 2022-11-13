@@ -53,6 +53,18 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-account-circle-line"></i>
+                        <span>Events</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('events.all') }}">Events View</a></li>
+                        <li><a href="{{ route('expired.events.all') }}">Expired Events</a></li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-layout-3-line"></i>
                         <span>multilevel</span>
                     </a>

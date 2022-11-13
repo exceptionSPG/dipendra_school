@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\BisestaController;
 use App\Http\Controllers\Backend\CommitteeController;
+use App\Http\Controllers\Backend\EventsController;
 use App\Http\Controllers\Frontend\AboutController as FrontendAboutController;
 use App\Http\Controllers\Frontend\FrCommitteeController;
 use App\Http\Controllers\Frontend\IndexController;
@@ -88,9 +89,6 @@ Route::controller(AboutController::class)->group(function () {
     Route::post('/timeline/update', 'TimelineUpdate')->name('timeline.update'); //timeline.edit
     Route::get('/timeline/delete/{id}', 'TimelineDelete')->name('timeline.delete'); //timeline.edit
 
-
-
-
 });
 
 //
@@ -123,11 +121,22 @@ Route::controller(CommitteeController::class)->group(function () {
     Route::post('/bhupu/store', 'BhupuBidhyarthiStore')->name('bhupu_bidhyarthi.store'); //bhupu_bidhyarthi.edit
     Route::get('/bhupu/edit/{id}', 'BhupuBidhyarthiEdit')->name('bhupu_bidhyarthi.edit'); //bhupu_bidhyarthi.edit
     Route::post('/bhupu/update', 'BhupuBidhyarthiUpdate')->name('bhupu_bidhyarthi.update'); //
-    Route::get('/bhupu/delete/{id}', 'BhupuBidhyarthiDelete')->name('bhupu_bidhyarthi.delete'); //
-
-
+    Route::get('/bhupu/delete/{id}', 'BhupuBidhyarthiDelete')->name('bhupu_bidhyarthi.delete'); //events.all
 
 
 });
+
+
+Route::controller(EventsController::class)->group(function () {
+    Route::get('/events/all', 'EventsAll')->name('events.all');
+    Route::get('/events/add', 'EventsAdd')->name('events.add');
+    Route::post('/events/store', 'EventsStore')->name('events.store'); //events.edit
+    Route::get('/events/edit/{id}', 'EventsEdit')->name('events.edit'); //
+    Route::post('/events/update', 'EventsUpdate')->name('events.update'); //
+    Route::get('/events/delete/{id}', 'EventsDelete')->name('events.delete'); //
+
+    Route::get('/expired/events/all', 'ExpiredEventsAll')->name('expired.events.all');
+});
+
 
 require __DIR__ . '/auth.php';

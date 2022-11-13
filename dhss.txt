@@ -34,3 +34,16 @@ aba siawsa ra bhupu sakesi committee sakinxa...
 
 1:04 PM 11/11/2022 ... bihana assignment ko resources ma kam gare..
 1:05 PM 11/11/2022 committee continue..
+2:48 PM 11/11/2022 finished section back and front...
+
+next: events and news...
+6:11 PM 11/11/2022 kapils' room...
+8:11 PM 11/11/2022 event store garna baki
+
+12:04 PM 11/13/2022 continuee....
+
+	php artisan config:cache
+	php artisan cache:clear
+	php artisan view:clear
+
+

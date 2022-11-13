@@ -66,7 +66,7 @@ class CommitteeController extends Controller
                 'alert-type' => 'success',
 
             );
-            return redirect()->back()->with($notification);
+            return redirect()->route('committee.all')->with($notification);
         }
     } //end method
 
