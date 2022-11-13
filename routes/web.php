@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\CommitteeController;
 use App\Http\Controllers\Backend\EventsController;
 use App\Http\Controllers\Frontend\AboutController as FrontendAboutController;
 use App\Http\Controllers\Frontend\FrCommitteeController;
+use App\Http\Controllers\Frontend\FrEventController;
 use App\Http\Controllers\Frontend\IndexController;
 
 /*
@@ -37,6 +38,14 @@ Route::controller(FrCommitteeController::class)->group(function () {
     Route::get('/bibyasa', 'BiByaSaShow')->name('bibyasa'); //
     Route::get('/siawsa', 'SiAwSaShow')->name('siawsa'); //
     Route::get('/bhupu-bidhyarthi', 'BhupuBidhyarthiShow')->name('bhupu_bidhyarthi'); //
+
+});
+
+
+Route::controller(FrEventController::class)->group(function () {
+    Route::get('/events', 'Events')->name('events'); //event.single
+    Route::get('/event/details/{id}', 'EventDetails')->name('event.single'); //event.single
+
 
 });
 

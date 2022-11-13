@@ -77,11 +77,9 @@ $route = Route::current()->getName();
                         </li>
 
 
-                        <li class="nav-item @@courses">
-                            <a class="nav-link" href="courses.html">COURSES</a>
-                        </li>
-                        <li class="nav-item @@events">
-                            <a class="nav-link" href="events.html">EVENTS</a>
+
+                        <li class="nav-item @@events {{ ($route == 'events' || $route == 'event.single' ) ? 'active':'' }}">
+                            <a class="nav-link" href="{{ route('events') }}">EVENTS</a>
                         </li>
                         <li class="nav-item @@blog">
                             <a class="nav-link" href="blog.html">BLOG</a>

@@ -47,3 +47,6 @@ next: events and news...
 	php artisan view:clear
 
 
+{!! Str::limit($item->description,200) !!}
+
+4:40 PM 11/13/2022 events completed...
