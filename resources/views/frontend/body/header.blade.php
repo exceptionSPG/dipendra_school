@@ -81,8 +81,8 @@ $route = Route::current()->getName();
                         <li class="nav-item @@events {{ ($route == 'events' || $route == 'event.single' ) ? 'active':'' }}">
                             <a class="nav-link" href="{{ route('events') }}">EVENTS</a>
                         </li>
-                        <li class="nav-item @@blog">
-                            <a class="nav-link" href="blog.html">BLOG</a>
+                        <li class="nav-item @@blog {{ ($route == 'news' || $route == 'news.single' ) ? 'active':'' }}">
+                            <a class="nav-link" href="{{ route('news') }}">News</a>
                         </li>
                         <li class="nav-item dropdown view">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

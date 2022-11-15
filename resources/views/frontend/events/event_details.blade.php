@@ -77,6 +77,14 @@
             </div>
         </div>
 
+        <!-- comment box -->
+        <div class="col-12">
+
+
+            <div class="fb-comments" data-href="http://127.0.0.1:8000/event/details/&#123;id&#125;" data-width="" data-numposts="5"></div>
+
+        </div>
+
     </div>
 </section>
 <!-- /event single -->

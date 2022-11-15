@@ -25,7 +25,26 @@
             <!-- slider item -->
             @endforeach
 
+            @foreach($blogs as $item)
+            <!-- slider item -->
+            <div class="hero-slider-item ">
+                <h2 class="text-white">
+                    Latest News:
+                </h2>
+                <div class="row">
+                    <div class="col-md-8">
 
+                        <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">{{ $item->title }}</h1>
+
+
+                        <br>
+                        <a href="{{ route('news.single',$item->id) }}" class="btn btn-primary" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".7">See More</a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- slider item -->
+            @endforeach
 
 
 
