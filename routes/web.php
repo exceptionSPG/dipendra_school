@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\BisestaController;
+use App\Http\Controllers\Backend\BlogsController;
 use App\Http\Controllers\Backend\CommitteeController;
 use App\Http\Controllers\Backend\EventsController;
 use App\Http\Controllers\Frontend\AboutController as FrontendAboutController;
@@ -142,9 +143,20 @@ Route::controller(EventsController::class)->group(function () {
     Route::post('/events/store', 'EventsStore')->name('events.store'); //events.edit
     Route::get('/events/edit/{id}', 'EventsEdit')->name('events.edit'); //
     Route::post('/events/update', 'EventsUpdate')->name('events.update'); //
-    Route::get('/events/delete/{id}', 'EventsDelete')->name('events.delete'); //
+    Route::get('/events/delete/{id}', 'EventsDelete')->name('events.delete'); //blogs.all
 
     Route::get('/expired/events/all', 'ExpiredEventsAll')->name('expired.events.all');
+});
+
+Route::controller(BlogsController::class)->group(function () {
+    Route::get('/blogs/all', 'BlogsAll')->name('blogs.all');
+    Route::get('/blogs/add', 'BlogsAdd')->name('blogs.add');
+    Route::post('/blogs/store', 'BlogStore')->name('blogs.store'); //
+    Route::get('/blog/edit/{id}', 'BlogEdit')->name('blogs.edit'); //
+    Route::post('/blogs/update', 'BlogUpdate')->name('blogs.update'); //
+    Route::get('/blogs/delete/{id}', 'BlogsDelete')->name('blogs.delete'); //
+
+
 });
 
 
