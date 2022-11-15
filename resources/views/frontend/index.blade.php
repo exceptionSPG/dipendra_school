@@ -51,155 +51,55 @@ Home - Dipendra Higher Secondary School
 </section>
 <!-- /about us -->
 
-<!-- courses -->
+<!-- committees -->
 <section class="section-sm">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="d-flex align-items-center section-title justify-content-between">
-                    <h2 class="mb-0 text-nowrap mr-3">Our Course</h2>
+                    <h2 class="mb-0 text-nowrap mr-3">Our Committees</h2>
                     <div class="border-top w-100 border-primary d-none d-sm-block"></div>
-                    <div>
-                        <a href="courses.html" class="btn btn-sm btn-outline-primary ml-sm-3 d-none d-sm-block">see all</a>
-                    </div>
+
                 </div>
             </div>
         </div>
         <!-- course list -->
         <div class="row justify-content-center">
+
+            @foreach($committee as $item)
             <!-- course item -->
             <div class="col-lg-4 col-sm-6 mb-5">
                 <div class="card p-0 border-primary rounded-0 hover-shadow">
-                    <img class="card-img-top rounded-0" src="{{ asset('frontend/images/courses/course-1.jpg') }}" alt="course thumb">
+                    <img class="card-img-top rounded-0" src="{{ asset($item->thumbnail) }}" alt="course thumb">
                     <div class="card-body">
-                        <ul class="list-inline mb-2">
-                            <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
-                            <li class="list-inline-item"><a class="text-color" href="course-single.html">Humanities</a></li>
-                        </ul>
-                        <a href="course-single.html">
-                            <h4 class="card-title">Photography</h4>
+
+                        <a href="{{ route('bibyasa') }}">
+                            <h4 class="card-title">{{$item->name}}</h4>
                         </a>
-                        <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna.</p>
-                        <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
+                        <p class="card-text mb-4"> {!! Str::limit($item->about,200) !!}</p>
+                        <a href="@if($item->id == 1)
+                        {{ route('bibyasa') }}
+                        @elseif($item->id == 2)
+                        {{ route('siawsa') }}
+                        @else
+                        {{ route('bhupu_bidhyarthi') }}
+                        @endif
+                        " class="btn btn-primary btn-sm">See More</a>
                     </div>
                 </div>
             </div>
             <!-- course item -->
-            <div class="col-lg-4 col-sm-6 mb-5">
-                <div class="card p-0 border-primary rounded-0 hover-shadow">
-                    <img class="card-img-top rounded-0" src="{{ asset('frontend/images/courses/course-2.jpg') }}" alt="course thumb">
-                    <div class="card-body">
-                        <ul class="list-inline mb-2">
-                            <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
-                            <li class="list-inline-item"><a class="text-color" href="course-single.html">Humanities</a></li>
-                        </ul>
-                        <a href="course-single.html">
-                            <h4 class="card-title">Programming</h4>
-                        </a>
-                        <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna.</p>
-                        <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
-                    </div>
-                </div>
-            </div>
-            <!-- course item -->
-            <div class="col-lg-4 col-sm-6 mb-5">
-                <div class="card p-0 border-primary rounded-0 hover-shadow">
-                    <img class="card-img-top rounded-0" src="{{ asset('frontend/images/courses/course-3.jpg') }}" alt="course thumb">
-                    <div class="card-body">
-                        <ul class="list-inline mb-2">
-                            <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
-                            <li class="list-inline-item"><a class="text-color" href="course-single.html">Humanities</a></li>
-                        </ul>
-                        <a href="course-single.html">
-                            <h4 class="card-title">Lifestyle Archives</h4>
-                        </a>
-                        <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna.</p>
-                        <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
-                    </div>
-                </div>
-            </div>
-            <!-- course item -->
-            <div class="col-lg-4 col-sm-6 mb-5">
-                <div class="card p-0 border-primary rounded-0 hover-shadow">
-                    <img class="card-img-top rounded-0" src="{{ asset('frontend/images/courses/course-4.jpg') }}" alt="course thumb">
-                    <div class="card-body">
-                        <ul class="list-inline mb-2">
-                            <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
-                            <li class="list-inline-item"><a class="text-color" href="course-single.html">Humanities</a></li>
-                        </ul>
-                        <a href="course-single.html">
-                            <h4 class="card-title">Complete Freelancing</h4>
-                        </a>
-                        <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna.</p>
-                        <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
-                    </div>
-                </div>
-            </div>
-            <!-- course item -->
-            <div class="col-lg-4 col-sm-6 mb-5">
-                <div class="card p-0 border-primary rounded-0 hover-shadow">
-                    <img class="card-img-top rounded-0" src="images/courses/course-5.jpg" alt="course thumb">
-                    <div class="card-body">
-                        <ul class="list-inline mb-2">
-                            <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
-                            <li class="list-inline-item"><a class="text-color" href="course-single.html">Humanities</a></li>
-                        </ul>
-                        <a href="course-single.html">
-                            <h4 class="card-title">Branding Design</h4>
-                        </a>
-                        <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna.</p>
-                        <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
-                    </div>
-                </div>
-            </div>
-            <!-- course item -->
-            <div class="col-lg-4 col-sm-6 mb-5">
-                <div class="card p-0 border-primary rounded-0 hover-shadow">
-                    <img class="card-img-top rounded-0" src="images/courses/course-6.jpg" alt="course thumb">
-                    <div class="card-body">
-                        <ul class="list-inline mb-2">
-                            <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
-                            <li class="list-inline-item"><a class="text-color" href="course-single.html">Humanities</a></li>
-                        </ul>
-                        <a href="course-single.html">
-                            <h4 class="card-title">Art Design</h4>
-                        </a>
-                        <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna.</p>
-                        <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
-                    </div>
-                </div>
-            </div>
+
+            @endforeach
+
         </div>
         <!-- /course list -->
-        <!-- mobile see all button -->
-        <div class="row">
-            <div class="col-12 text-center">
-                <a href="courses.html" class="btn btn-sm btn-outline-primary d-sm-none d-inline-block">sell all</a>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- /courses -->
 
-<!-- cta -->
-<section class="section bg-primary">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h6 class="text-white font-secondary mb-0">Click to Join the Advance Workshop</h6>
-                <h2 class="section-title text-white">Training In Advannce Networking</h2>
-                <a href="contact.html" class="btn btn-light">join now</a>
-            </div>
-        </div>
     </div>
 </section>
-<!-- /cta -->
+<!-- /committees -->
+
+
 
 <!-- success story -->
 <section class="section bg-cover" data-background="images/backgrounds/success-story.jpg">
@@ -235,136 +135,48 @@ Home - Dipendra Higher Secondary School
                     <h2 class="mb-0 text-nowrap mr-3">Upcoming Events</h2>
                     <div class="border-top w-100 border-primary d-none d-sm-block"></div>
                     <div>
-                        <a href="events.html" class="btn btn-sm btn-outline-primary ml-sm-3 d-none d-sm-block">see all</a>
+                        <a href="{{ route('events') }}" class="btn btn-sm btn-outline-primary ml-sm-3 d-none d-sm-block">see all</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row justify-content-center">
+            @forelse($events as $item)
             <!-- event -->
             <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
                 <div class="card border-0 rounded-0 hover-shadow">
                     <div class="card-img position-relative">
-                        <img class="card-img-top rounded-0" src="images/events/event-1.jpg" alt="event thumb">
-                        <div class="card-date"><span>18</span><br>December</div>
+                        <img class="card-img-top rounded-0" src="{{ asset($item->thumbnail)}}" alt="event thumb">
+                        @php
+                        $day = Carbon\Carbon::parse($item->date)->day;
+                        $month = Carbon\Carbon::parse($item->date)->format('F');
+                        @endphp
+                        <div class="card-date"><span>{{ $day }}</span><br>{{$month}}</div>
                     </div>
                     <div class="card-body">
                         <!-- location -->
-                        <p><i class="ti-location-pin text-primary mr-2"></i>Dhanmondi Lake, Dhaka</p>
-                        <a href="event-single.html">
-                            <h4 class="card-title">Lorem ipsum dolor amet, consectetur adipisicing.</h4>
+                        <p><i class="ti-location-pin text-primary mr-2"></i>{{ $item->location }}</p>
+                        <a href="{{ route('event.single',$item->id) }}">
+                            <h4 class="card-title">{{ $item->title }}</h4>
                         </a>
                     </div>
                 </div>
             </div>
             <!-- event -->
-            <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-                <div class="card border-0 rounded-0 hover-shadow">
-                    <div class="card-img position-relative">
-                        <img class="card-img-top rounded-0" src="images/events/event-2.jpg" alt="event thumb">
-                        <div class="card-date"><span>21</span><br>December</div>
-                    </div>
-                    <div class="card-body">
-                        <!-- location -->
-                        <p><i class="ti-location-pin text-primary mr-2"></i>Dhanmondi Lake, Dhaka</p>
-                        <a href="event-single.html">
-                            <h4 class="card-title">Lorem ipsum dolor amet, consectetur adipisicing.</h4>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- event -->
-            <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-                <div class="card border-0 rounded-0 hover-shadow">
-                    <div class="card-img position-relative">
-                        <img class="card-img-top rounded-0" src="images/events/event-3.jpg" alt="event thumb">
-                        <div class="card-date"><span>23</span><br>December</div>
-                    </div>
-                    <div class="card-body">
-                        <!-- location -->
-                        <p><i class="ti-location-pin text-primary mr-2"></i>Dhanmondi Lake, Dhaka</p>
-                        <a href="event-single.html">
-                            <h4 class="card-title">Lorem ipsum dolor amet, consectetur adipisicing.</h4>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+
         </div>
         <!-- mobile see all button -->
         <div class="row">
             <div class="col-12 text-center">
-                <a href="course.html" class="btn btn-sm btn-outline-primary d-sm-none d-inline-block">sell all</a>
+                <a href="{{ route('events') }}" class="btn btn-sm btn-outline-primary d-sm-none d-inline-block">See all</a>
             </div>
         </div>
     </div>
 </section>
 <!-- /events -->
 
-<!-- teachers -->
-<section class="section">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <h2 class="section-title">Our Teachers</h2>
-            </div>
-            <!-- teacher -->
-            <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-                <div class="card border-0 rounded-0 hover-shadow">
-                    <img class="card-img-top rounded-0" src="images/teachers/teacher-1.jpg" alt="teacher">
-                    <div class="card-body">
-                        <a href="teacher-single.html">
-                            <h4 class="card-title">Jacke Masito</h4>
-                        </a>
-                        <p>Teacher</p>
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><a class="text-color" href="https://facebook.com/themefisher"><i class="ti-facebook"></i></a></li>
-                            <li class="list-inline-item"><a class="text-color" href="https://twitter.com/themefisher"><i class="ti-twitter-alt"></i></a></li>
-                            <li class="list-inline-item"><a class="text-color" href="https://github.com/themefisher"><i class="ti-google"></i></a></li>
-                            <li class="list-inline-item"><a class="text-color" href="https://instagram.com/themefisher/"><i class="ti-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- teacher -->
-            <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-                <div class="card border-0 rounded-0 hover-shadow">
-                    <img class="card-img-top rounded-0" src="images/teachers/teacher-2.jpg" alt="teacher">
-                    <div class="card-body">
-                        <a href="teacher-single.html">
-                            <h4 class="card-title">Clark Malik</h4>
-                        </a>
-                        <p>Teacher</p>
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><a class="text-color" href="https://facebook.com/themefisher"><i class="ti-facebook"></i></a></li>
-                            <li class="list-inline-item"><a class="text-color" href="https://twitter.com/themefisher"><i class="ti-twitter-alt"></i></a></li>
-                            <li class="list-inline-item"><a class="text-color" href="https://github.com/themefisher"><i class="ti-google"></i></a></li>
-                            <li class="list-inline-item"><a class="text-color" href="https://instagram.com/themefisher/"><i class="ti-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- teacher -->
-            <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-                <div class="card border-0 rounded-0 hover-shadow">
-                    <img class="card-img-top rounded-0" src="images/teachers/teacher-3.jpg" alt="teacher">
-                    <div class="card-body">
-                        <a href="teacher-single.html">
-                            <h4 class="card-title">John Doe</h4>
-                        </a>
-                        <p>Teacher</p>
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><a class="text-color" href="https://facebook.com/themefisher"><i class="ti-facebook"></i></a></li>
-                            <li class="list-inline-item"><a class="text-color" href="https://twitter.com/themefisher"><i class="ti-twitter-alt"></i></a></li>
-                            <li class="list-inline-item"><a class="text-color" href="https://github.com/themefisher"><i class="ti-google"></i></a></li>
-                            <li class="list-inline-item"><a class="text-color" href="https://instagram.com/themefisher/"><i class="ti-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- /teachers -->
+<!-- components home_teacher ma xa -->
 
 <!-- blog -->
 <section class="section pt-0">

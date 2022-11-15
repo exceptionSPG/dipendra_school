@@ -50,3 +50,12 @@ next: events and news...
 {!! Str::limit($item->description,200) !!}
 
 4:40 PM 11/13/2022 events completed...
+
+3:02 PM 11/15/2022 blogs garau aba.. aba ali fast garau hai, aaj kartik 29 xa...voli belka samma ma yo jasary sakkaunai parne hunxa hai...
+baki:
+	notice
+	notice-details
+	scholarship
+	meetings - backend only.
+	site-settings
+
