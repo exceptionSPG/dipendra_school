@@ -63,4 +63,12 @@ baki:
 
 4:56 PM 11/15/2022 line aayo..
 5:54 PM 11/15/2022 blogs backend done.
+10:15 PM 11/15/2022 blogs frontend and facebook comment integrated..
+
+
+============================
+8:49 PM 12/7/2022 after longg time, trying to implement contact us section.. I want to make like, when someone fills form, store it in db, send auto mail to him, and fetch all mail to admin and add reply at admin. 
+let's do this myaan.
+
+Model: name, email, subject, msg, status->is_replied?, reply_msg
 

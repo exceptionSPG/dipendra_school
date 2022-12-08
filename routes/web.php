@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\BisestaController;
 use App\Http\Controllers\Backend\BlogsController;
 use App\Http\Controllers\Backend\CommitteeController;
+use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\EventsController;
 use App\Http\Controllers\Frontend\AboutController as FrontendAboutController;
 use App\Http\Controllers\Frontend\FrBlogController;
@@ -161,6 +162,14 @@ Route::controller(BlogsController::class)->group(function () {
     Route::get('/blog/edit/{id}', 'BlogEdit')->name('blogs.edit'); //
     Route::post('/blogs/update', 'BlogUpdate')->name('blogs.update'); //
     Route::get('/blogs/delete/{id}', 'BlogsDelete')->name('blogs.delete'); //
+
+
+});
+
+Route::controller(ContactController::class)->group(function () {
+    Route::get('/mails/all', 'MailsAll')->name('emails.view'); //mail.reply
+    Route::get('/mail/reply/{id}', 'MailReply')->name('mail.reply'); //mail.reply
+    Route::get('/mail/delete/{id}', 'MailDelete')->name('mail.delete'); //
 
 
 });
