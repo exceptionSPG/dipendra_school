@@ -21,7 +21,7 @@ $route = Route::current()->getName();
                 </div>
                 <div class="col-lg-8 text-center text-lg-right">
                     <ul class="list-inline">
-                        <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="notice.html">notice</a></li>
+                        <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{ route('notices') }}">notice</a></li>
                         <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{ route('news') }}">news</a></li>
                         <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{ route('events') }}">events</a></li>
                         <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{ route('login') }}">login</a></li>
@@ -84,7 +84,11 @@ $route = Route::current()->getName();
                         <li class="nav-item @@blog {{ ($route == 'news' || $route == 'news.single' ) ? 'active':'' }}">
                             <a class="nav-link" href="{{ route('news') }}">News</a>
                         </li>
-                        <li class="nav-item dropdown view">
+                        <li class="nav-item @@notice {{ ($route == 'notices' || $route == 'notice.single' ) ? 'active':'' }}">
+                            <a class="nav-link" href="{{ route('notices') }}">Notices</a>
+                        </li>
+
+                        <!-- <li class="nav-item dropdown view">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Pages
                             </a>
@@ -110,7 +114,7 @@ $route = Route::current()->getName();
                                     </ul>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li class="nav-item @@contact">
                             <a class="nav-link" href="{{route('contact.us') }}">CONTACT</a>
                         </li>

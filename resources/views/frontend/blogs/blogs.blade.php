@@ -1,6 +1,6 @@
 @extends('frontend.main_master')
 @section('title')
-बिद्यालय व्यवस्थापन समिति - Dipendra Higher Secondary School
+News - Dipendra Higher Secondary School
 @endsection
 @section('content')
 

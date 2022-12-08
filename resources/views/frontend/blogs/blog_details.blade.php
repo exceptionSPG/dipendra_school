@@ -1,6 +1,6 @@
 @extends('frontend.main_master')
 @section('title')
-$blog->title - Dipendra Higher Secondary School
+{{$blog->title}} - Dipendra Higher Secondary School
 @endsection
 @section('content')
 

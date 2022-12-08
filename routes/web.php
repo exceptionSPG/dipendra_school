@@ -13,6 +13,7 @@ use App\Http\Controllers\Frontend\AboutController as FrontendAboutController;
 use App\Http\Controllers\Frontend\FrBlogController;
 use App\Http\Controllers\Frontend\FrCommitteeController;
 use App\Http\Controllers\Frontend\FrEventController;
+use App\Http\Controllers\Frontend\FrNoticeController;
 use App\Http\Controllers\Frontend\IndexController;
 
 /*
@@ -55,6 +56,12 @@ Route::controller(FrEventController::class)->group(function () {
 Route::controller(FrBlogController::class)->group(function () {
     Route::get('/news', 'Blogs')->name('news'); //event.single
     Route::get('/news/details/{id}', 'BlogDetails')->name('news.single'); //news
+
+});
+
+Route::controller(FrNoticeController::class)->group(function () {
+    Route::get('/notices', 'Notices')->name('notices'); //event.single
+    Route::get('/notice/details/{id}', 'NoticeDetails')->name('notice.single'); //news
 
 });
 
