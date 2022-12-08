@@ -167,11 +167,14 @@ Route::controller(BlogsController::class)->group(function () {
 });
 
 Route::controller(ContactController::class)->group(function () {
-    Route::get('/mails/all', 'MailsAll')->name('emails.view'); //mail.reply
+    Route::get('/mails/new', 'MailsAll')->name('emails.view'); //responded_mails.view
+    Route::get('/mails/old', 'MailsOld')->name('responded_mails.view'); //
     Route::get('/mail/reply/{id}', 'MailReply')->name('mail.reply'); //mail.reply
     Route::get('/mail/delete/{id}', 'MailDelete')->name('mail.delete'); //mail.store
+    Route::post('/replied/mail', 'MailToReply')->name('mails.to.reply'); //mail.store
 
-    Route::get('/contact-us','ContactUs')->name('contact.us');
+
+    Route::get('/contact-us', 'ContactUs')->name('contact.us');
     Route::post('/mail/store', 'MailStore')->name('mail.store'); //mail.store
 
 

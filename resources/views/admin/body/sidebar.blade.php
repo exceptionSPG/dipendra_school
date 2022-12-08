@@ -73,7 +73,7 @@
                     </ul>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-layout-3-line"></i>
                         <span>multilevel</span>
@@ -102,9 +102,9 @@
                             </ul>
                         </li>
                     </ul>
-                </li>
+                </li> -->
 
-                <li class="menu-title">Pages</li>
+                <li class="menu-title">Utility</li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
@@ -112,14 +112,13 @@
                         <span>Email</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('emails.view') }}">All Emails</a></li>
-                        <li><a href="auth-register.html">Register</a></li>
-                        <li><a href="auth-recoverpw.html">Recover Password</a></li>
-                        <li><a href="auth-lock-screen.html">Lock Screen</a></li>
+                        <li><a href="{{ route('emails.view') }}">New Messages</a></li>
+                        <li><a href="{{ route('responded_mails.view') }}">Replied Messages</a></li>
+
                     </ul>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-profile-line"></i>
                         <span>Utility</span>
@@ -132,7 +131,7 @@
                         <li><a href="pages-404.html">Error 404</a></li>
                         <li><a href="pages-500.html">Error 500</a></li>
                     </ul>
-                </li>
+                </li> -->
 
 
 

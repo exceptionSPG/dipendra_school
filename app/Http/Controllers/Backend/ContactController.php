@@ -16,8 +16,14 @@ class ContactController extends Controller
     //
     public function mailsAll()
     {
-        $mails = Contact::orderBY('id', 'ASC')->get();
+        $mails = Contact::orderBY('created_at', 'ASC')->where('status', 0)->get();
         return view("admin.contact.all_emails", compact('mails'));
+    } //end method
+
+    public function MailsOld()
+    {
+        $mails = Contact::orderBY('id', 'ASC')->where('status', 1)->get();
+        return view("admin.contact.responded_mails", compact('mails'));
     } //end method
 
     public function MailReply($id)
@@ -38,6 +44,42 @@ class ContactController extends Controller
 
         );
         return redirect()->back()->with($notification);
+    } //end method
+
+
+
+    public function MailToReply(Request $request)
+    {
+        $contact = Contact::findOrFail($request->id);
+        $request->validate([
+            'reply_message' => 'required',
+
+        ], [
+            'reply_message.required' => 'Please write your reply.',
+        ]);
+        Contact::findOrFail($request->id)->update([
+            'status' => 1,
+            'reply_message' => $request->reply_message,
+            'updated_at' => Carbon::now(),
+        ]);
+
+        /*****************************START: SEND mail */
+
+
+        $data = [
+            'contact' => $contact,
+            'messages' => $request->reply_message,
+            'subject' => 'We got you back for: ' . $contact->subject,
+
+        ];
+        Mail::to($contact->email)->send(new MessageReceivedToSenderMail($data));
+        /*****************************END: SEND mail */
+        $notification = array(
+            'message' => 'Mail sent Successfully.',
+            'alert-type' => 'success',
+
+        );
+        return redirect()->route('emails.view')->with($notification);
     }
 
 
@@ -71,7 +113,7 @@ class ContactController extends Controller
         ]);
 
 
-        //store in db $order_id = Order::insertGetId
+        //store in db 
         $con_id = Contact::insertGetId([
             'name' => $request->name,
             'email' => $request->email,
@@ -101,7 +143,7 @@ class ContactController extends Controller
             //to sender
             $data1 = [
                 'contact' => $contact,
-                'messages' => 'Thank you, ' . $contact->name . ', for getting in touch with us. We received your message : ' . $contact->message . '. We will get back to you soon.',
+                'messages' => 'Thank you, <b>' . $contact->name . '</b>, for getting in touch with us. We received your message : <b>' . $contact->message . '</b>. We will get back to you soon.',
                 'subject' => 'We received your message.',
 
             ];
