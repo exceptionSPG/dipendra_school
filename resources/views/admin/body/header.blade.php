@@ -1,5 +1,6 @@
 <header id="page-topbar">
-    <div class="navbar-header">
+    <div class="navbar-header d-flex justify-content-between">
+
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
@@ -36,6 +37,7 @@
 
 
         </div>
+
 
         <div class="d-flex">
 

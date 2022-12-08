@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\BlogsController;
 use App\Http\Controllers\Backend\CommitteeController;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\EventsController;
+use App\Http\Controllers\Backend\NoticeController;
 use App\Http\Controllers\Frontend\AboutController as FrontendAboutController;
 use App\Http\Controllers\Frontend\FrBlogController;
 use App\Http\Controllers\Frontend\FrCommitteeController;
@@ -162,6 +163,17 @@ Route::controller(BlogsController::class)->group(function () {
     Route::get('/blog/edit/{id}', 'BlogEdit')->name('blogs.edit'); //
     Route::post('/blogs/update', 'BlogUpdate')->name('blogs.update'); //
     Route::get('/blogs/delete/{id}', 'BlogsDelete')->name('blogs.delete'); //
+
+
+});
+
+Route::controller(NoticeController::class)->group(function () {
+    Route::get('/notice/all', 'NoticeAll')->name('notice.all');
+    Route::get('/notice/add', 'NoticeAdd')->name('notice.add');
+    Route::post('/notice/store', 'NoticeStore')->name('notice.store'); //
+    Route::get('/notice/edit/{id}', 'NoticeEdit')->name('notice.edit'); //
+    Route::post('/notice/update', 'NoticeUpdate')->name('notice.update'); //
+    Route::get('/notice/delete/{id}', 'NoticeDelete')->name('notice.delete'); //
 
 
 });

@@ -163,7 +163,15 @@ Home - Dipendra Higher Secondary School
                 </div>
             </div>
             <!-- event -->
-            @endforeach
+            @empty
+            <div class="border-0 rounded-0 ">
+
+
+                <h3>No Upcoming Events for now.</h3>
+                <p>Check us later.</p>
+
+            </div>
+            @endforelse
 
         </div>
         <!-- mobile see all button -->

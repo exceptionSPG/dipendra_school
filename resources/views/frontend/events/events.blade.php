@@ -12,7 +12,7 @@ Events - Dipendra Higher Secondary School
         <div class="row">
 
 
-            @foreach($events as $item)
+            @forelse($events as $item)
             <!-- event -->
             <div class="col-lg-4 col-sm-6 mb-5">
                 <div class="card border-0 rounded-0 hover-shadow">
@@ -34,7 +34,20 @@ Events - Dipendra Higher Secondary School
                 </div>
             </div>
             <!-- event -->
-            @endforeach
+            @empty
+
+            <div class="card border-0 rounded-0 ">
+
+                <div class="card-body">
+                    <!-- location -->
+                    <h2>No Upcoming Events</h2>
+                    <p>Check us later.</p>
+
+                </div>
+            </div>
+
+            @endforelse
+
 
         </div>
     </div>
