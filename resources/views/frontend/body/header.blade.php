@@ -112,7 +112,7 @@ $route = Route::current()->getName();
                             </ul>
                         </li>
                         <li class="nav-item @@contact">
-                            <a class="nav-link" href="contact.html">CONTACT</a>
+                            <a class="nav-link" href="{{route('contact.us') }}">CONTACT</a>
                         </li>
                     </ul>
                 </div>

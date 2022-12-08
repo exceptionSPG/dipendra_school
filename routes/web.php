@@ -169,7 +169,11 @@ Route::controller(BlogsController::class)->group(function () {
 Route::controller(ContactController::class)->group(function () {
     Route::get('/mails/all', 'MailsAll')->name('emails.view'); //mail.reply
     Route::get('/mail/reply/{id}', 'MailReply')->name('mail.reply'); //mail.reply
-    Route::get('/mail/delete/{id}', 'MailDelete')->name('mail.delete'); //
+    Route::get('/mail/delete/{id}', 'MailDelete')->name('mail.delete'); //mail.store
+
+    Route::get('/contact-us','ContactUs')->name('contact.us');
+    Route::post('/mail/store', 'MailStore')->name('mail.store'); //mail.store
+
 
 
 });
