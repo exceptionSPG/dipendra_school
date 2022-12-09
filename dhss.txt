@@ -72,3 +72,6 @@ let's do this myaan.
 
 Model: name, email, subject, msg, status->is_replied?, reply_msg
 
+
+9:26 AM 12/9/2022: share social
+<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=6392aa2865735e001232d82b&product=inline-share-buttons' async='async'></script>

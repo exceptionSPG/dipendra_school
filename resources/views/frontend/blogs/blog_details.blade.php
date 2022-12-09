@@ -34,6 +34,9 @@
                 {!! $blog->detail !!}
             </div>
 
+            <!-- ShareThis BEGIN -->
+            <div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
+
             <!-- comment box -->
             <div class="col-12">
 

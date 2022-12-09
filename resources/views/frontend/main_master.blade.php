@@ -57,6 +57,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
 
 
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=6392aa2865735e001232d82b&product=inline-share-buttons' async='async'></script>
+
 </head>
 
 <body>

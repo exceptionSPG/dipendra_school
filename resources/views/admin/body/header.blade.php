@@ -1,24 +1,26 @@
 <header id="page-topbar">
     <div class="navbar-header d-flex justify-content-between">
-
+        @php
+        $site = App\Models\Backend\SiteSetting::find(1);
+        @endphp
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="{{ asset('logo/kailaba_logo.png') }}" alt="logo-sm" height="22">
+                        <img src="{{ asset($site->logo) }}" alt="logo-sm" height="22">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ asset('logo/kailaba_logo.png') }}" alt="logo-dark" height="20">
+                        <img src="{{ asset($site->logo) }}" alt="logo-dark" height="20">
                     </span>
                 </a>
 
                 <a href="{{ route('dashboard') }}" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{ asset('logo/kailaba_logo.png') }}" alt="logo-sm-light" height="80">
+                        <img src="{{ asset($site->logo) }}" alt="logo-sm-light" height="80">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ asset('logo/kailaba_logo.png') }}" alt="logo-light" height="80">
+                        <img src="{{ asset($site->logo) }}" alt="logo-light" height="80">
                     </span>
                 </a>
             </div>

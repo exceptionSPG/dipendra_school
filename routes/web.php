@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\CommitteeController;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\EventsController;
 use App\Http\Controllers\Backend\NoticeController;
+use App\Http\Controllers\Backend\SiteSettingController;
 use App\Http\Controllers\Frontend\AboutController as FrontendAboutController;
 use App\Http\Controllers\Frontend\FrBlogController;
 use App\Http\Controllers\Frontend\FrCommitteeController;
@@ -199,6 +200,15 @@ Route::controller(ContactController::class)->group(function () {
 
 
 });
+
+//site.setting 
+/* *****************Manage Site setting all routes**************/
+
+Route::controller(SiteSettingController::class)->group(function () {
+    Route::get('/site', 'SiteSetting')->name('site.setting'); //update.site.setting
+    Route::post('/site/update', 'UpdateSiteSetting')->name('update.site.setting');
+});
+
 
 
 require __DIR__ . '/auth.php';

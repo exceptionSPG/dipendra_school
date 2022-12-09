@@ -1,7 +1,13 @@
+@php
+
+$site = App\Models\Backend\SiteSetting::find(1);
+
+@endphp
+
 <!-- footer -->
 <footer>
     <!-- newsletter -->
-    <div class="newsletter">
+    <!-- <div class="newsletter">
         <div class="container">
             <div class="row">
                 <div class="col-md-9 ml-auto bg-primary py-5 newsletter-block">
@@ -15,19 +21,19 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- footer content -->
     <div class="footer bg-footer section border-bottom">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
                     <!-- logo -->
-                    <a class="logo-footer" href="index.html"><img class="img-fluid mb-4" src="images/logo.png" alt="logo"></a>
+                    <a class="logo-footer" href="{{ route('index')}}"><img class="img-fluid mb-4" src="{{ asset($site->logo)}}" alt="Dipendra HSS Logo"></a>
                     <ul class="list-unstyled">
-                        <li class="mb-2">23621 15 Mile Rd #C104, Clinton MI, 48035, New York, USA</li>
-                        <li class="mb-2">+1 (2) 345 6789</li>
-                        <li class="mb-2">+1 (2) 345 6789</li>
-                        <li class="mb-2">contact@yourdomain.com</li>
+                        <li class="mb-2">{{ $site->school_address}}</li>
+                        <li class="mb-2"><a href="tel:{{ $site->phone_one }}">{{ $site->phone_one }}</a> </li>
+                        <li class="mb-2"><a href="tel:{{ $site->phone_two }}">{{ $site->phone_two }}</a></li>
+                        <li class="mb-2"><a href="mailto:{{ $site->email }}"> {{ $site->email }}</a></li>
                     </ul>
                 </div>
                 <!-- company -->
