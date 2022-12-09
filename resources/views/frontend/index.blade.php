@@ -104,27 +104,58 @@ Home - Dipendra Higher Secondary School
 <!-- success story -->
 <section class="section bg-cover" data-background="images/backgrounds/success-story.jpg">
     <div class="container">
+
         <div class="row">
-            <div class="col-lg-6 col-sm-4 position-relative success-video">
-                <a class="play-btn venobox" href="https://youtu.be/nA1Aqp0sPQo" data-vbtype="video">
-                    <i class="ti-control-play"></i>
-                </a>
-            </div>
-            <div class="col-lg-6 col-sm-8">
-                <div class="bg-white p-5">
-                    <h2 class="section-title">Success Stories</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+            <div class="col-12">
+                <div class="d-flex align-items-center section-title justify-content-between">
+                    <h2 class="mb-0 text-nowrap mr-3">Latest Notices</h2>
+                    <div class="border-top w-100 border-primary d-none d-sm-block"></div>
+                    <div>
+                        <a href="{{ route('notices') }}" class="btn btn-sm btn-outline-primary ml-sm-3 d-none d-sm-block">see all</a>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+        <div class="row justify-content-center">
+            @forelse($notices as $item)
+
+
+            <!-- Notices -->
+            <li class="d-md-table mb-4 w-100 border-bottom hover-shadow">
+                @php
+                $day = Carbon\Carbon::parse($item->notice_date)->day;
+                $month = Carbon\Carbon::parse($item->notice_date)->format('M');
+                $year = Carbon\Carbon::parse($item->notice_date)->format('Y');
+                @endphp
+                <div class="d-md-table-cell text-center p-4 bg-primary text-white mb-4 mb-md-0"><span class="h2 d-block">{{ $day }}</span> {{$month}}, {{$year}}</div>
+                <div class="d-md-table-cell px-4 vertical-align-middle mb-4 mb-md-0">
+                    <a href="{{ route('notice.single',$item->id) }}" class="h4 mb-3 d-block">{{ $item->title }}</a>
+                    <p class="mb-0">{!! Str::limit($item->description,200) !!}</p>
+                </div>
+                <div class="d-md-table-cell text-right pr-0 pr-md-4"><a href="{{ route('notice.single',$item->id) }}" class="btn btn-primary">read more</a></div>
+            </li>
+            @empty
+            <div class="border-0 rounded-0 ">
+
+
+                <h3>No Latest Notices for now.</h3>
+                <p>Check us later.</p>
+
+            </div>
+
+            @endforelse
+
+
+        </div>
+
+
     </div>
 </section>
 <!-- /success story -->
+
+
 
 <!-- events -->
 <section class="section bg-gray">

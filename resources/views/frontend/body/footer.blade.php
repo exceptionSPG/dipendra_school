@@ -36,44 +36,38 @@ $site = App\Models\Backend\SiteSetting::find(1);
                         <li class="mb-2"><a href="mailto:{{ $site->email }}"> {{ $site->email }}</a></li>
                     </ul>
                 </div>
-                <!-- company -->
+                <!-- school -->
                 <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-                    <h4 class="text-white mb-5">COMPANY</h4>
+                    <h4 class="text-white mb-5">School Insights</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-3"><a class="text-color" href="about.html">About Us</a></li>
-                        <li class="mb-3"><a class="text-color" href="teacher.html">Our Teacher</a></li>
-                        <li class="mb-3"><a class="text-color" href="contact.html">Contact</a></li>
-                        <li class="mb-3"><a class="text-color" href="blog.html">Blog</a></li>
+                        <li class="mb-3"><a class="text-color" href="{{route('frontend.about.introduction') }}">About Us</a></li>
+                        <li class="mb-3"><a class="text-color" href="{{ route('frontend.about.teachers') }}">Our Teacher</a></li>
+                        <li class="mb-3"><a class="text-color" href="{{ route('contact.us') }}">Contact</a></li>
+                        <li class="mb-3"><a class="text-color" href="{{route('news') }}">Blog</a></li>
                     </ul>
                 </div>
                 <!-- links -->
                 <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-                    <h4 class="text-white mb-5">LINKS</h4>
+                    <h4 class="text-white mb-5">External LINKS</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-3"><a class="text-color" href="courses.html">Courses</a></li>
-                        <li class="mb-3"><a class="text-color" href="events.html">Events</a></li>
-                        <li class="mb-3"><a class="text-color" href="notice.html">Notice</a></li>
-                        <li class="mb-3"><a class="text-color" href="scholarship.html">Scholarship</a></li>
+                        <li class="mb-3"><a class="text-color" target="_blank" href="https://kailaba.com/">Kailaba</a></li>
+                        <li class="mb-3"><a class="text-color" href="https://moest.gov.np/">Ministry Of Education</a></li>
+                        <li class="mb-3"><a class="text-color" href="{{ route('notices') }}">Notice</a></li>
+                        <li class="mb-3"><a class="text-color" target="_blank" href="https://see.ntc.net.np/">SEE Result</a></li>
                     </ul>
                 </div>
                 <!-- support -->
                 <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
                     <h4 class="text-white mb-5">SUPPORT</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-3"><a class="text-color" href="https://themefisher.com/blog">Forums</a></li>
-                        <li class="mb-3"><a class="text-color" href="https://docs.themefisher.com/">Documentation</a></li>
-                        <li class="mb-3"><a class="text-color" href="#!">Language</a></li>
-                        <li class="mb-3"><a class="text-color" href="#!">Release Status</a></li>
+
                     </ul>
                 </div>
                 <!-- support -->
                 <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
                     <h4 class="text-white mb-5">RECOMMEND</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-3"><a class="text-color" href="https://themefisher.com/">WordPress</a></li>
-                        <li class="mb-3"><a class="text-color" href="https://themefisher.com/">LearnPress</a></li>
-                        <li class="mb-3"><a class="text-color" href="https://themefisher.com/">WooCommerce</a></li>
-                        <li class="mb-3"><a class="text-color" href="https://themefisher.com/">bbPress</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -89,15 +83,13 @@ $site = App\Models\Backend\SiteSetting::find(1);
                             var CurrentYear = new Date().getFullYear()
                             document.write(CurrentYear)
                         </script>
-                        , designed & developed by <a href="https://themefisher.com/" class="text-muted">Themefisher</a>
+                        , designed & developed by <a href="https://kailaba.com/" class="text-muted">Kailaba</a>
                     </p>
                 </div>
                 <div class="col-sm-5 text-sm-right text-center">
                     <ul class="list-inline">
-                        <li class="list-inline-item"><a class="d-inline-block p-2" href="https://facebook.com/themefisher/"><i class="ti-facebook text-primary"></i></a></li>
-                        <li class="list-inline-item"><a class="d-inline-block p-2" href="https://twitter.com/themefisher"><i class="ti-twitter-alt text-primary"></i></a></li>
-                        <li class="list-inline-item"><a class="d-inline-block p-2" href="https://github.com/themefisher"><i class="ti-github text-primary"></i></a></li>
-                        <li class="list-inline-item"><a class="d-inline-block p-2" href="https://instagram.com/themefisher/"><i class="ti-instagram text-primary"></i></a></li>
+                        <li class="list-inline-item"><a class="d-inline-block p-2" href="{{ $site->facebook }}"><i class="ti-facebook text-primary"></i></a></li>
+
                     </ul>
                 </div>
             </div>
