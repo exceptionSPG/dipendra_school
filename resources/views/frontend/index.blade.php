@@ -39,7 +39,7 @@ Home - Dipendra Higher Secondary School
         <div class="row align-items-center">
             <div class="col-md-6 order-2 order-md-1">
                 <h2 class="section-title">About Dipendra</h2>
-                <p>{!! $about->description !!} </p>
+                <p>{!! Str::limit($about->description,250) !!}</p>
 
                 <a href="{{ route('frontend.about.introduction') }}" class="btn btn-outline-primary">Learn more</a>
             </div>
