@@ -33,21 +33,20 @@ Contact Us - Dipendra Higher Secondary School
                             </form>
                         </div>
                         <div class="col-lg-5">
-                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit recusandae voluptates doloremque veniam temporibus porro culpa ipsa, nisi soluta minima saepe laboriosam debitis nesciunt. Dolore, labore. Accusamus nulla sed cum aliquid exercitationem debitis error harum porro maxime quo iusto aliquam dicta modi earum fugiat, vel possimus commodi, deleniti et veniam, fuga ipsum praesentium. Odit unde optio nulla ipsum quae obcaecati! Quod esse natus quibusdam asperiores quam vel, tempore itaque architecto ducimus expedita</p>
-                            <a href="tel:+8802057843248" class="text-color h5 d-block">+880 20 5784 3248</a>
-                            <a href="mailto:yourmail@email.com" class="mb-5 text-color h5 d-block">yourmail@email.com</a>
-                            <p>71 Shelton Street<br>London WC2H 9JQ England</p>
+                            <p class="mb-5">{!! Str::limit($about->description,250) !!}</p>
+                            <a href="tel:{{$site->phone_one}}" class="text-color h5 d-block">{{$site->phone_one}}</a>
+                            <a href="mailto:{{ $site->email }}" class="mb-5 text-color h5 d-block">{{ $site->email }}</a>
+                            <p>{{ $site->school_address}}</p>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- /contact -->
 
-
             <!-- gmap -->
             <section class="section pt-0">
-                <!-- Google Map -->
-                <div id="map_canvas" data-latitude="51.507351" data-longitude="-0.127758"></div>
+                <!-- Google Map 27.6681133,83.8378486 -->
+                <div id="map_canvas" data-latitude="27.6681133" data-longitude="83.8378486"></div>
             </section>
             <!-- /gmap -->
 
@@ -56,5 +55,16 @@ Contact Us - Dipendra Higher Secondary School
 </section>
 <!-- /courses -->
 
+<script>
+    function initialize() {
+        var myLatlng = new google.maps.LatLng(27.6681133, 83.8378486);
+        var myOptions = {
+            zoom: 15,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    };
+</script>
 
 @endsection

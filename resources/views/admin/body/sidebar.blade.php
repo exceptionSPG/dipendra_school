@@ -1,3 +1,7 @@
+@php
+$countall = App\Models\Backend\Contact::all()->count();
+$countPending = App\Models\Backend\Contact::where('status', 0)->count();
+@endphp
 <!-- ========== Left Sidebar Start ========== -->
 <div class="vertical-menu">
 
@@ -118,10 +122,12 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-account-circle-line"></i>
+
+                        <i class="ri-account-circle-line"></i><span class="badge rounded-pill bg-success float-end">{{$countall}}</span>
                         <span>Email</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
+                        <span class="badge rounded-pill bg-success float-end">{{$countPending}}</span>
                         <li><a href="{{ route('emails.view') }}">New Messages</a></li>
                         <li><a href="{{ route('responded_mails.view') }}">Replied Messages</a></li>
 

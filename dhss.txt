@@ -1,6 +1,10 @@
 12:23 AM 11/6/2022 theme educenter halne hai frontend ma...
 https://rsmv.edu.np/
 
+Account: 
+shivaji@gmail.com
+user1234
+
 7:17 AM 11/6/2022 let's start the journey...
 
 10:52 AM 11/6/2022 dhan thressor laune kam hudaixa...
@@ -75,3 +79,19 @@ Model: name, email, subject, msg, status->is_replied?, reply_msg
 
 9:26 AM 12/9/2022: share social
 <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=6392aa2865735e001232d82b&product=inline-share-buttons' async='async'></script>
+
+
+5:00 PM 12/9/2022 lagvag aba sakiyo hai..
+
+
+
+
+12:36 PM 12/21/2022 mail setup 
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=93523900ebae52
+MAIL_PASSWORD=e20309750edad7
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS="support@dhss.com"
+MAIL_FROM_NAME="${APP_NAME}"

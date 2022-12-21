@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Mail\ContactToAdminMail;
 use App\Mail\MessageReceivedToSenderMail;
+use App\Models\Backend\AboutIntroduction;
 use App\Models\Backend\Contact;
+use App\Models\Backend\SiteSetting;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -90,8 +92,10 @@ class ContactController extends Controller
         $page_title = "Contact Us";
         $parent_page = "Home";
         $route = "index";
+        $about = AboutIntroduction::find(1);
+        $site = SiteSetting::find(1);
 
-        return view('frontend.contact.contact_us', compact('page_title', 'parent_page', 'route'));
+        return view('frontend.contact.contact_us', compact('page_title', 'parent_page', 'route', 'about', 'site'));
     } //end method
 
     public function MailStore(Request $request)

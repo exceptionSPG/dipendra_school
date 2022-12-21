@@ -99,6 +99,8 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"></script>
     <script src="{{ asset('frontend/plugins/google-map/gmap.js') }}"></script>
 
+
+
     <!-- Main Script -->
     <script src="{{ asset('frontend/js/script.js') }}"></script>
     <!-- JS -->
