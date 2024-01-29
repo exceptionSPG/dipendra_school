@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - /bin/cp /home4/manmohan/repositories/storehouse/dipendra.env .env
+    - export DEPLOYPATH=/home4/manmohan/dipendra.manmohanmemorialhospital.com
+    - /bin/cp -RT /home4/manmohan/repositories/dss-repos/dipendra_school $DEPLOYPATH
